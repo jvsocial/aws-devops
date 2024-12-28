@@ -1,24 +1,21 @@
----
-layout: nil 
----
-
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>{{ page.title }}</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            margin: 0;
-            padding: 20px;
-        }
-        h1 {
-            font-size: 2em;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ site.reveal_js_dir }}/dist/reveal.css">
+    <link rel="stylesheet" href="{{ site.reveal_js_dir }}/dist/theme/black.css" id="theme">
 </head>
 <body>
-    <h1>{{ page.title }}</h1>
-    {{ content }}
+    <div class="reveal">
+        <div class="slides">
+            {{ content }}
+        </div>
+    </div>
+    <script src="{{ site.reveal_js_dir }}/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize();
+    </script>
 </body>
 </html>
