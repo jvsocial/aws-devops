@@ -1,0 +1,23 @@
+I"<h1 id="level-1-heading">Level 1 Heading</h1>
+
+<p>This is the main content of the slide.</p>
+
+<h2 id="level-2-heading">Level 2 Heading</h2>
+
+<ul>
+  <li>Bullet point 1</li>
+  <li>Bullet point 2</li>
+</ul>
+
+<h3 id="level-3-heading">Level 3 Heading</h3>
+
+<p>This is a sub-section within Level 2.</p>
+
+<p><strong>Bold text</strong> and <em>italic text</em> are supported.</p>
+
+<p>```ruby</p>
+<h1 id="code-block-with-syntax-highlighting">Code block with syntax highlighting</h1>
+<p>def my_method
+  # Some code here
+end</p>
+:ET

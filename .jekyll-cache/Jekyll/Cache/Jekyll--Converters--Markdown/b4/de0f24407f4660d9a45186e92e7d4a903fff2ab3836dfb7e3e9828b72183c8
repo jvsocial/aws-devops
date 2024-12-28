@@ -1,0 +1,70 @@
+I"Ž<p>This is my slide content.</p>
+
+<h1 id="bluegreen-deployments-quick-study-notes">Blue/Green Deployments: Quick Study Notes**</h1>
+
+<p><strong>Core Concept:</strong> Two identical environments (Blue = Live, Green = New Version). Deploy to Green, test, switch traffic.</p>
+
+<p><strong>Why Blue/Green?</strong></p>
+
+<ul>
+  <li><strong>Zero Downtime:</strong> Near-instantaneous switch.</li>
+  <li><strong>Reduced Risk:</strong> Easy rollback to Blue if needed.</li>
+  <li><strong>Simple Rollbacks:</strong> Just switch traffic back.</li>
+  <li><strong>Improved Testing:</strong> Production-like environment for testing.</li>
+</ul>
+
+<p><strong>How it Works (Steps):</strong></p>
+
+<ol>
+  <li><strong>Set up:</strong> Two identical environments (Blue &amp; Green).</li>
+  <li><strong>Deploy:</strong> Deploy new version to Green.</li>
+  <li><strong>Test:</strong> Thorough testing in Green.</li>
+  <li><strong>Switch Traffic:</strong> Redirect traffic from Blue to Green (Load balancer, DNS).</li>
+  <li><strong>Monitor:</strong> Watch Green closely after the switch.</li>
+  <li><strong>Repurpose:</strong> Blue becomes the new Green for the next deployment.</li>
+</ol>
+
+<p><strong>When to Use:</strong></p>
+
+<ul>
+  <li><strong>Frequent Releases:</strong> Ideal for continuous delivery.</li>
+  <li><strong>Critical Apps:</strong> Where downtime is unacceptable.</li>
+  <li><strong>Complex Deployments:</strong> Simplifies complex updates.</li>
+</ul>
+
+<p><strong>When NOT to Use (Consider Alternatives):</strong></p>
+
+<ul>
+  <li><strong>Limited Resources:</strong> Requires double the infrastructure.</li>
+  <li><strong>Complex Database Migrations:</strong> Backward compatibility is key; requires careful planning.</li>
+  <li><strong>Stateful Applications:</strong> Requires strategies for state/session management.</li>
+</ul>
+
+<p><strong>Key Considerations (Questions to Ask):</strong></p>
+
+<ul>
+  <li><strong>Cost:</strong> Can you afford the extra infrastructure?</li>
+  <li><strong>Complexity:</strong> Is the application complex enough to justify it?</li>
+  <li><strong>Downtime Tolerance:</strong> How much downtime is acceptable?</li>
+  <li><strong>Rollback Needs:</strong> How important is quick rollback?</li>
+</ul>
+
+<p><strong>Post-Switch Actions:</strong></p>
+
+<ul>
+  <li><strong>Monitor:</strong> Closely monitor the new Green environment.</li>
+  <li><strong>Blue Environment:</strong> Keep Blue as backup (short-term) or repurpose it as the new Green.</li>
+</ul>
+
+<p><strong>Common Questions &amp; Answers:</strong></p>
+
+<ul>
+  <li><strong>Database Migrations:</strong> Use backward-compatible changes; techniques like schema versioning.</li>
+  <li><strong>Stateful Apps:</strong> Use session replication, shared storage, or similar methods.</li>
+  <li><strong>Automation:</strong> Use load balancers, DNS, CI/CD tools to automate the switch.</li>
+  <li><strong>Blue/Green Naming:</strong> Just a convention; any two names work (A/B, Red/Black).</li>
+  <li><strong>Deployment to Green Fails:</strong> Fix the issue in Green and redeploy; Blue remains live.</li>
+</ul>
+
+<p><strong>In essence:</strong> Blue/Green is about minimizing disruption during deployments by having a ready standby environment.</p>
+:ET
